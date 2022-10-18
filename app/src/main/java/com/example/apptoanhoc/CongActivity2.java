@@ -16,16 +16,19 @@ import java.util.Random;
 
 public class CongActivity2 extends AppCompatActivity {
 
-    TextView tvCaculation, tvDialogResult;
+    TextView tvPoint, tvCaculation, tvDialogResult;
     Button btnReset, btnCorrect, btnWrong, btnDialogContinue, btnDialogClose;
     int number1, number2, result, ifResultFalse;
+    int point = 100;
     boolean isTrue;
+    boolean isPointChecked = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cong2);
 
+        tvPoint = findViewById(R.id.text_view_point);
         tvCaculation = findViewById(R.id.text_view_caculation);
         btnReset = findViewById(R.id.button_reset);
         btnCorrect = findViewById(R.id.button_correct);
@@ -37,6 +40,7 @@ public class CongActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Random();
+                isPointChecked = true;
             }
         });
 
@@ -48,9 +52,17 @@ public class CongActivity2 extends AppCompatActivity {
 
                 if (isTrue) {
                     tvDialogResult.setText("Bạn chọn chính xác\nKết quả là A. Đúng");
+                    if (isPointChecked) {
+                        point = point + 10;
+                    }
                 } else {
                     tvDialogResult.setText("Bạn chọn A. Đúng\nKết quả là B. Sai");
+                    if (isPointChecked) {
+                        point = point - 10;
+                    }
                 }
+                isPointChecked = false;
+                tvPoint.setText(point + "");
             }
         });
 
@@ -62,9 +74,17 @@ public class CongActivity2 extends AppCompatActivity {
 
                 if (!isTrue) {
                     tvDialogResult.setText("Bạn chọn chính xác\nKết quả là B. Sai");
+                    if (isPointChecked) {
+                        point = point + 10;
+                    }
                 } else {
                     tvDialogResult.setText("Bạn chọn B. Sai\nKết quả là A. Đúng");
+                    if (isPointChecked) {
+                        point = point - 10;
+                    }
                 }
+                isPointChecked = false;
+                tvPoint.setText(point + "");
             }
         });
     }
@@ -105,6 +125,7 @@ public class CongActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Random();
                 dialog.dismiss();
+                isPointChecked = true;
             }
         });
 

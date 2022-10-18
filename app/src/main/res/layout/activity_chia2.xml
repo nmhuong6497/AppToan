@@ -7,6 +7,19 @@
     android:background="@drawable/tinhtoan">
 
     <TextView
+        android:id="@+id/text_view_point"
+        android:textColor="#f20"
+        android:textSize="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="25dp"
+        android:text="100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="#008778"
         android:id="@+id/text_view_caculation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
