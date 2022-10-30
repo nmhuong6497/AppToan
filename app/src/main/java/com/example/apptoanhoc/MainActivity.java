@@ -6,7 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import com.example.apptoanhoc.caculation.ChiaActivity;
+import com.example.apptoanhoc.caculation.CongActivity;
+import com.example.apptoanhoc.caculation.NhanActivity;
+import com.example.apptoanhoc.caculation.TruActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnCong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CongActivity2.class);
+                Intent intent = new Intent(MainActivity.this, CongActivity.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnTru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, TruActivity2.class);
+                Intent intent = new Intent(MainActivity.this, TruActivity.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         btnNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this, NhanActivity2.class);
+                Intent intent= new Intent(MainActivity.this, NhanActivity.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         btnChia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this, ChiaActivity2.class);
+                Intent intent= new Intent(MainActivity.this, ChiaActivity.class);
                 startActivity(intent);
             }
         });
