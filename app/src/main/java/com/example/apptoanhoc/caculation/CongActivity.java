@@ -1,9 +1,11 @@
 package com.example.apptoanhoc.caculation;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -12,9 +14,11 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.apptoanhoc.MainActivity;
 import com.example.apptoanhoc.R;
 
 import java.util.Random;
+import java.util.stream.Stream;
 
 public class CongActivity extends AppCompatActivity {
 
